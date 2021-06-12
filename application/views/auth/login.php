@@ -32,8 +32,8 @@
             <h1>Login Form</h1>
             <?= $this->session->flashdata('message'); ?>
             <div>
-              <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
-              <input type="text" name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
+              <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+              <input type="text" name="username" class="form-control" placeholder="Username" value="<?= set_value('username'); ?>">
             </div>
             <div>
               <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -47,11 +47,8 @@
             <div class="clearfix"></div>
 
             <div class="separator">
-              <p class="change_link">Forgot Password?
-                <a href="<?= base_url('auth/lupaPassword'); ?>" class="to_register"> Reset Password </a>
-              </p>
-              <p class="change_link">New to site?
-                <a href="<?= base_url('auth/registrasi'); ?>" class="to_register"> Create Account </a>
+              <p class="change_link">Belum punya akun?
+                <a href="<?= base_url('auth/registrasi'); ?>" class="to_register"> Daftar Sekarang</a>
               </p>
 
               <div class="clearfix"></div>

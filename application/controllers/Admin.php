@@ -15,7 +15,7 @@ class Admin extends CI_Controller
   public function index()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['jml_user'] = $this->db->get('user')->num_rows();
     $data['jml_rule'] = $this->db->get('rule')->num_rows();
     $data['jml_gejala'] = $this->db->get('gejala')->num_rows();
@@ -30,7 +30,7 @@ class Admin extends CI_Controller
   public function member()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 3])->row_array();
     $data['member'] = $this->db->get('user')->result_array();
     $this->load->view('templates/header', $data);
@@ -44,7 +44,7 @@ class Admin extends CI_Controller
   public function gejala()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 4])->row_array();
     $data['gejala'] = $this->db->get('gejala')->result_array();
     $data['kode'] = $this->admin->cekKodeGejala();
@@ -61,7 +61,7 @@ class Admin extends CI_Controller
   public function penyakit()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 5])->row_array();
     $data['penyakit'] = $this->db->get('penyakit')->result_array();
     $data['kode'] = $this->admin->cekKodePenyakit();
@@ -77,7 +77,7 @@ class Admin extends CI_Controller
   public function rule()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 6])->row_array();
     $data['penyakit'] = $this->db->get('penyakit')->result_array();
     $this->load->view('templates/header', $data);
@@ -90,7 +90,7 @@ class Admin extends CI_Controller
   public function konsultasi()
   {
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 7])->row_array();
     $data['dftr_konsul'] = $this->db->get('daftar_konsultasi')->result_array();
     $this->load->view('templates/header', $data);

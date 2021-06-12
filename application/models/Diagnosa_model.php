@@ -273,7 +273,7 @@ class Diagnosa_model extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('user');
-    $this->db->where('email', $this->session->userdata('email'));
+    $this->db->where('username', $this->session->userdata('username'));
     $data = $this->db->get()->result();
     foreach ($data as $row) {
       $idUser = $row->id;

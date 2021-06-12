@@ -17,7 +17,7 @@ class Home extends CI_Controller
   }
   public function hasil_diagnosa()
   {
-    // if (!$this->session->userdata('email')) {
+    // if (!$this->session->userdata('username')) {
     //   redirect('home');
     // }
     $this->load->view('home/hasil_diagnosa');
@@ -32,7 +32,7 @@ class Home extends CI_Controller
 
   public function diagnosa()
   {
-    if (!$this->session->userdata('email')) {
+    if (!$this->session->userdata('username')) {
       redirect('auth');
     }
     $this->session->set_flashdata('hasil');

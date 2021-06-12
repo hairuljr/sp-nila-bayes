@@ -13,7 +13,7 @@
           <input type="hidden" name="id" value="<?= $m['id']; ?>">
           <div class="modal-body">
             <div class="form-group">
-              <input type="text" class="form-control" id="email" name="email" value="<?= $m['email']; ?>" readonly>
+              <input type="text" class="form-control" id="username" name="username" value="<?= $m['username']; ?>" readonly>
             </div>
             <div class="form-group">
               <div class='input-group date' id='datetimepicker7'>

@@ -7,7 +7,7 @@ class Diagnosa extends CI_Controller
   {
     parent::__construct();
     $this->load->model('Diagnosa_model', 'diagnosa');
-    if (!$this->session->userdata('email')) {
+    if (!$this->session->userdata('username')) {
       redirect('home');
     }
   }

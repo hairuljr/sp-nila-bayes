@@ -40,7 +40,7 @@
         <li><a href="<?= base_url('home/about'); ?>">Tentang</a></li>
         <li><a href="<?= base_url('home/contact'); ?>">Kontak</a></li>
         <?php
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('username')) {
           $log = 'Keluar';
           $url = 'logout';
           $link = base_url('user');
@@ -52,7 +52,7 @@
         }
         ?>
         <?= $menu; ?>
-        <li>
+        <li style="margin-top: 5px; !important">
           <a href="<?= base_url('auth/logout'); ?>" class="signup-btn"><span>Keluar</span></a>
         </li>
       </ul>

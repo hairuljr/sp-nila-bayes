@@ -41,7 +41,7 @@
         <li><a href="<?= base_url('home/article'); ?>">Article</a></li>
         <li><a href="<?= base_url('home/contact'); ?>">Contact</a></li>
         <?php
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('username')) {
           $log = 'Logout';
           $url = 'logout';
           $link = base_url('user');

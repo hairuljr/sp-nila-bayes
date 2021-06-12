@@ -29,18 +29,18 @@
       <div class="animate form login_form">
         <section class="login_content">
           <form method="POST" action="<?= base_url('auth/registrasi'); ?>">
-            <h1>Create Account</h1>
+            <h1>Buat Akun</h1>
             <div>
               <small class="text-danger">
                 <?= form_error('name'); ?>
               </small>
-              <input type="text" name="name" class="form-control" placeholder="Username" value="<?= set_value('name'); ?>">
+              <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" value="<?= set_value('name'); ?>">
             </div>
             <div>
               <small class="text-danger">
-                <?= form_error('email'); ?>
+                <?= form_error('username'); ?>
               </small>
-              <input type="text" name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
+              <input type="text" name="username" class="form-control" placeholder="Username" value="<?= set_value('username'); ?>">
             </div>
             <div>
               <small class="text-danger">
@@ -49,16 +49,16 @@
               <input type="password" name="password1" class="form-control" placeholder="Password">
             </div>
             <div>
-              <input type="password" name="password2" class="form-control" placeholder="Confirm Password">
+              <input type="password" name="password2" class="form-control" placeholder="Ulangi Password">
             </div>
             <div>
-              <button style="margin-left: 120px;" class="buttonku buttonku--moema buttonku--text-thick buttonku--text-upper buttonku--size-m" type="submit">Register</button>
+              <button style="margin-left: 120px;" class="buttonku buttonku--moema buttonku--text-thick buttonku--text-upper buttonku--size-m" type="submit">Daftar</button>
             </div>
 
             <div class="clearfix"></div>
 
             <div class="separator">
-              <p class="change_link">Already a member ?
+              <p class="change_link">Sudah jadi member?
                 <a href="<?= base_url('auth'); ?>" class="to_register"> Login </a>
               </p>
               <div class="clearfix"></div>

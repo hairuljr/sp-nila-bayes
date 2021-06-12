@@ -6,16 +6,16 @@ class User_model extends CI_Model
   public function editProfil()
   {
     $name = htmlspecialchars($this->input->post('name', true));
-    $email = htmlspecialchars($this->input->post('email', true));
+    $username = htmlspecialchars($this->input->post('username', true));
     //query insert data ke tbl user
     $this->db->set('name', $name);
-    $this->db->where('email', $email);
+    $this->db->where('username', $username);
     $this->db->update('user');
   }
   public function ubahPassword($password_hash)
   {
     $this->db->set('password', $password_hash);
-    $this->db->where('email', $this->session->userdata('email'));
+    $this->db->where('username', $this->session->userdata('username'));
     $this->db->update('user');
   }
 
@@ -23,7 +23,7 @@ class User_model extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('user');
-    $this->db->where('email', $this->session->userdata('email'));
+    $this->db->where('username', $this->session->userdata('username'));
     $data = $this->db->get()->result();
     foreach ($data as $row) {
       $idUser = $row->id;

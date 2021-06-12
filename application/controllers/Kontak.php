@@ -24,7 +24,7 @@ class Kontak extends CI_Controller
 	{
 		$data = [
 			'nama' => $this->input->post('namaAnda'),
-			'email' => $this->input->post('emailAnda'),
+			'username' => $this->input->post('usernameAnda'),
 			'no_hp' => $this->input->post('no_hpAnda'),
 			'pesan' => $this->input->post('pesanAnda')
 		];

@@ -8,7 +8,7 @@ class Rule extends CI_Controller
     parent::__construct();
     $this->load->model('Rule_model', 'rule');
     $this->load->model('Admin_model', 'admin');
-    if (!$this->session->userdata('email')) {
+    if (!$this->session->userdata('username')) {
       redirect('auth');
     }
   }
@@ -16,7 +16,7 @@ class Rule extends CI_Controller
   {
     $data['rule_name'] = ucfirst($penyakit);
     $data['judul'] = 'Admin SP';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 6])->row_array();
     $data['penyakit'] = $this->db->get('penyakit')->result_array();
     $data['gejala'] = $this->db->get('gejala')->result_array();

@@ -3,9 +3,9 @@
 function sudah_login()
 {
   $ci = get_instance();
-  //jika tidak ada session email pada userdata
+  //jika tidak ada session username pada userdata
   //atau user belum login
-  if (!$ci->session->userdata('email')) {
+  if (!$ci->session->userdata('username')) {
     // tendang ke auth/login page
     redirect('auth');
     //jika session ada pada url/method nya maka dapat (sudah login)

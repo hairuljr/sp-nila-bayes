@@ -3,20 +3,24 @@
 	padding: 0;
 	font-family: sans-serif;
 }
+
 .container {
 	width: 100%;
 	height: 100%;
 	background: #42455a;
 }
+
 .container2 {
 	background-image: linear-gradient(to top right, #42455a, gray);
 }
+
 .menu ul {
 	display: inline-flex;
 	margin: 20px;
 	margin-left: 50px;
 	margin-right: 50px;
 }
+
 .menu ul li {
 	list-style: none;
 	margin: 0 20px;
@@ -24,26 +28,31 @@
 	color: #b2b1b1;
 	cursor: pointer;
 }
+
 .menu ul li a {
 	text-decoration: none;
 	list-style: none;
 	color: #b2b1b1;
 	cursor: pointer;
 }
+
 .menu ul i {
 	width: 50%;
 	margin-right: 10px;
 	font-size: 50px;
 }
+
 .fa {
 	color: #fff;
 }
+
 .active {
 	color: #19dafa !important;
 }
+
 .signup-btn {
-	bottom:505px;
-	right: 50px;
+	/* bottom:505px;
+	right: 50px; */
 	position: absolute;
 	text-decoration: none;
 	color: #fff;
@@ -54,10 +63,12 @@
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 }
+
 .signup-btn span {
 	display: block;
 	padding: 8px 22px;
 }
+
 .banner {
 	width: 80%;
 	height: 70%;
@@ -66,16 +77,19 @@
 	position: absolute;
 	color: #fff;
 }
+
 .app-text {
 	width: 50%;
 	float: left;
 }
+
 .app-text h1 {
 	font-size: 30px;
 	width: 640px;
 	position: relative;
 	margin-left: 20px;
 }
+
 .app-text p {
 	width: 650px;
 	font-size: 15px;
@@ -83,18 +97,22 @@
 	line-height: 25px;
 	color: #919191;
 }
+
 .app-picture {
 	width: 50%;
 	float: right;
 }
+
 .app-picture img {
 	width: 100%;
 	padding-left: 30px;
 }
+
 .play-btn {
 	margin-left: 20px;
 	display: inline-flex;
 }
+
 .play-btn-inner {
 	height: 50px;
 	width: 50px;
@@ -106,11 +124,13 @@
 	background-clip: content-box, border-box;
 	text-align: center;
 }
+
 .play-btn-inner .fa {
 	padding: 18px 0;
 	font-size: 14px;
 	cursor: pointer;
 }
+
 small {
 	margin: auto 20px;
 	cursor: pointer;
@@ -118,41 +138,49 @@ small {
 	color: #19dafa;
 	letter-spacing: 3px;
 }
+
 .quick-links {
 	left: 0;
 	bottom: 0;
 	position: absolute;
 	background: linear-gradient(to right, #db1bf6, #19d7f8);
 }
+
 .quick-links ul {
 	display: flex;
 	margin: 30px auto;
 	text-align: center;
 }
+
 .quick-links ul li {
 	list-style: none;
 	margin: 0 50px;
 	cursor: pointer;
 }
+
 .quick-links ul li .fa {
 	font-size: 25px;
 	color: #fff;
 }
+
 .quick-links ul li p {
 	margin-top: 25px;
 	font-size: 10px;
 	color: #fff;
 }
+
 .social-icons {
 	right: 72px;
 	bottom: 35px;
 	position: absolute;
 }
+
 .social-icons ul li {
 	list-style: none;
 	margin-top: 15px;
 	text-align: center;
 }
+
 .social-icons ul li a {
 	color: #999;
 	border-radius: 50%;
@@ -160,6 +188,7 @@ small {
 	padding: 5px;
 	display: block;
 }
+
 .btn {
 	box-sizing: border-box;
 	-webkit-appearance: none;
@@ -183,11 +212,13 @@ small {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 }
+
 .btn:hover,
 .btn:focus {
 	color: #fff;
 	outline: 0;
 }
+
 .tutt {
 	display: flex;
 	flex-wrap: wrap;
@@ -195,6 +226,7 @@ small {
 	align-items: center;
 	align-content: center;
 }
+
 .third {
 	border-color: #3498db;
 	margin: 10px;
@@ -202,25 +234,23 @@ small {
 	box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
 	transition: all 150ms ease-in-out;
 }
+
 .third:hover {
 	box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
+
 /* Reponsive */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
+@media only screen and (min-width: 1200px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media only screen and (min-width: 768px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+@media only screen and (min-width: 600px) {}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -228,6 +258,7 @@ small {
 		display: inline-flex;
 		margin: 10px;
 	}
+
 	.menu ul li {
 		list-style: none;
 		margin: 0 10px;
@@ -235,17 +266,20 @@ small {
 		color: #b2b1b1;
 		cursor: pointer;
 	}
+
 	.menu ul i {
 		width: 50%;
 		margin-right: 10px;
 		font-size: 50px;
 	}
+
 	.signup-btn {
 		bottom: 492px;
 		top: 18px;
 		right: 15px;
 		font-size: 12px;
 	}
+
 	.banner {
 		width: 60%;
 		height: 20%;
@@ -254,20 +288,24 @@ small {
 		position: absolute;
 		color: #fff;
 	}
+
 	.app-text h1 {
 		font-size: 20px;
 		width: 360px;
 		position: relative;
 	}
+
 	.app-picture {
 		width: 80%;
 		float: left;
 	}
+
 	.app-picture img {
 		width: 100%;
 		padding-top: 30px;
 		padding-bottom: 500px;
 	}
+
 	.play-btn {
 		margin-left: 20px;
 		display: inline-flex;

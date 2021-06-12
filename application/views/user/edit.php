@@ -19,14 +19,14 @@
             <?= form_open_multipart('user/edit'); ?>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <input type="text" class="form-control has-feedback-left" id="email" name="email" value="<?= $user['email']; ?>" readonly>
-              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
               <input type="text" class="form-control has-feedback-left" id="name" name="name" value="<?= $user['name']; ?>">
               <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
               <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+              <input type="text" class="form-control has-feedback-left" id="username" name="username" value="<?= $user['username']; ?>">
+              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
             </div>
             <div class="clearfix"></div>
             <div class="form-group">

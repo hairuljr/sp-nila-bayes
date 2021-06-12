@@ -19,7 +19,7 @@
         <li><a href="<?= base_url('home/about'); ?>">Tentang</a></li>
         <li class="active"><a class="active" href="<?= base_url('home/contact'); ?>">Kontak</a></li>
         <?php
-        if ($this->session->userdata('email')) {
+        if ($this->session->userdata('username')) {
           $log = 'Keluar';
           $url = 'logout';
           $link = base_url('user');
@@ -31,7 +31,7 @@
         }
         ?>
         <?= $menu; ?>
-        <li>
+        <li style="margin-top: 5px; !important">
           <a href="<?= base_url("auth/" . $url); ?>" class="signup-btn"><span><?= $log; ?></span></a>
         </li>
       </ul>
@@ -43,7 +43,7 @@
     <div class="border"></div>
     <form class="contact-form" action="<?= base_url('kontak/simpan'); ?>" method="POST">
       <input name="namaAnda" type="text" class="contact-form-text" placeholder="Nama anda">
-      <input name="emailAnda" type="email" class="contact-form-text" placeholder="Email anda">
+      <input name="usernameAnda" type="username" class="contact-form-text" placeholder="username anda">
       <input name="no_hpAnda" type="text" class="contact-form-text" placeholder="No HP anda">
       <textarea name="pesanAnda" class="contact-form-text" placeholder="Pesan anda"></textarea>
       <input type="submit" class="contact-form-btn" value="Kirim">

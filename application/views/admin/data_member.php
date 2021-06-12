@@ -25,7 +25,7 @@
                         <tr>
                           <th>No</th>
                           <th>Nama</th>
-                          <th>Email</th>
+                          <th>Username</th>
                           <th>Status</th>
                           <th>Tgl Registrasi</th>
                           <th>Aksi</th>
@@ -44,7 +44,7 @@
                           <tr>
                             <td><?= $i; ?></td>
                             <td><?= $m['name']; ?></td>
-                            <td><?= $m['email']; ?></td>
+                            <td><?= $m['username']; ?></td>
                             <td><?= $m['is_active']; ?></td>
                             <td><?= (new DateTime($m['date_created']))->format('d F Y'); ?></td>
                             <td style="text-align: center">

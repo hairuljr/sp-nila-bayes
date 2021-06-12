@@ -8,14 +8,14 @@ class User extends CI_Controller
     parent::__construct();
     $this->load->library('form_validation');
     $this->load->model('User_model', 'user');
-    if (!$this->session->userdata('email')) {
+    if (!$this->session->userdata('username')) {
       redirect('auth');
     }
   }
   public function index()
   {
     $data['judul'] = 'Profil';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
     $this->load->view('templates/topbar', $data);
@@ -26,7 +26,7 @@ class User extends CI_Controller
   public function edit()
   {
     $data['judul'] = 'Edit Profil';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
     $this->form_validation->set_rules('name', 'Nama lengkap', 'required|trim');
 
@@ -67,7 +67,7 @@ class User extends CI_Controller
   public function ubahPassword()
   {
     $data['judul'] = 'Ubah Password';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
     $this->form_validation->set_rules('current_password', 'Password lama', 'required|trim');
     $this->form_validation->set_rules('new_password1', 'Password baru', 'required|trim|min_length[3]|matches[new_password2]');
@@ -103,7 +103,7 @@ class User extends CI_Controller
   public function konsultasiku()
   {
     $data['judul'] = 'Riwayat Konsultasi';
-    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+    $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
     $data['subMenu'] = $this->db->get_where('sub_menu_user', ['id' => 7])->row_array();
     $data['dftr_konsul'] = $this->user->getKonsul();
     $data['daftar'] = $this->db->get('daftar_konsultasi')->result_array();

@@ -7,7 +7,7 @@ class Member extends CI_Controller
   {
     parent::__construct();
     $this->load->model('Admin_model', 'admin');
-    if (!$this->session->userdata('email')) {
+    if (!$this->session->userdata('username')) {
       redirect('auth');
     }
   }

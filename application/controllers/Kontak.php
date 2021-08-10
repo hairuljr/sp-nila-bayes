@@ -23,10 +23,11 @@ class Kontak extends CI_Controller
 	public function simpan()
 	{
 		$data = [
-			'nama' => $this->input->post('namaAnda'),
-			'username' => $this->input->post('usernameAnda'),
-			'no_hp' => $this->input->post('no_hpAnda'),
-			'pesan' => $this->input->post('pesanAnda')
+			'nama' => $this->input->post('nama'),
+			'email' => $this->input->post('email'),
+			'no_hp' => $this->input->post('no_hp'),
+			'pesan' => $this->input->post('pesan'),
+			'tanggal' => date('Y-m-d')
 		];
 		$this->db->insert('kontak', $data);
 		$this->session->set_flashdata('pesan', 'Dikirimkan');

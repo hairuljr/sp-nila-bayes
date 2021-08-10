@@ -14,7 +14,7 @@
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
-      /* width: 33.33%; */
+      width: 75%;
       padding: 10px;
       height: 300px;
       /* Should be removed. Only for demonstration */
@@ -58,35 +58,37 @@
       </ul>
     </div>
     <form action="<?= base_url('diagnosa/hasil'); ?>" method="POST">
-      <h2 style="color: #b2b1b1; text-align: center;">Daftar Gejala</h2>
-
-      <div class="row" style="display: flex; justify-content: center;">
+      <h2 style="color: #b2b1b1; text-align: center;">Pilih Gejala Ikan</h2>
+      <div class="row" style="display: flex; justify-content: center; font-size: 18px;">
         <div class="column">
-          <?php foreach (array_slice($gejala, 0, 15) as $g) : ?>
+          <?php $no = 1; ?>
+          <?php foreach ($gejala as $g) : ?>
             <div class="inputGroup">
               <input id="<?= $g['id_gejala']; ?>" name="gejala[]" value="<?= $g['id_gejala']; ?>" type="checkbox" />
-              <label for="<?= $g['id_gejala']; ?>"><?= $g['gejala']; ?></label>
+              <label for="<?= $g['id_gejala']; ?>"><?= $no++; ?> - <?= $g['gejala']; ?></label>
             </div>
           <?php endforeach; ?>
-        </div>
-        <div class="column">
-          <?php foreach (array_slice($gejala, 15, 30) as $g) : ?>
-            <div class="inputGroup">
-              <input id="<?= $g['id_gejala']; ?>" name="gejala[]" value="<?= $g['id_gejala']; ?>" type="checkbox" />
-              <label for="<?= $g['id_gejala']; ?>"><?= $g['gejala']; ?></label>
-            </div>
-          <?php endforeach; ?>
-        </div>
-        <div class="column" style="display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        align-content: flex-start;">
-          <button class="btn third" type="reset">Reset</button>
-          <button class="btn third" type="submit">Hitung</button>
+          <div class="row" style="display: flex; justify-content: center; font-size: 12px; flex-direction: row;">
+            <button class="btn fourth" type="reset">Batal</button>
+            <button class="btn third checkBtn" type="submit">Hitung</button>
+          </div>
         </div>
       </div>
     </form>
   </div>
+  <script src="<?= base_url('assets'); ?>/vendors/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.checkBtn').click(function() {
+        checked = $("input[type=checkbox]:checked").length;
+        if (!checked) {
+          alert("Pilih salah satu gejala.");
+          return false;
+        }
+
+      });
+    });
+  </script>
 </body>
 
 </html>

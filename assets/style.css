@@ -235,8 +235,25 @@ small {
 	transition: all 150ms ease-in-out;
 }
 
-.third:hover {
-	box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+.btnKembali {
+	width: 255px;
+	border: none;
+	margin: 5px;
+	color: #fff;
+	box-shadow: 0 0 40px 40px #3b5e75 inset, 0 0 0 0 #3b5e75;
+	transition: all 150ms ease-in-out;
+}
+
+.fourth {
+	border-color: #dd4848;
+	margin: 10px;
+	color: #fff;
+	box-shadow: 0 0 40px 40px #dd4848 inset, 0 0 0 0 #dd4848;
+	transition: all 150ms ease-in-out;
+}
+
+.fourth:hover {
+	box-shadow: 0 0 10px 0 #dd4848 inset, 0 0 10px 4px #dd4848;
 }
 
 /* Reponsive */

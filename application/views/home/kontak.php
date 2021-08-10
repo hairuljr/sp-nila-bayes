@@ -42,10 +42,10 @@
     <h1>Kontak Kami</h1>
     <div class="border"></div>
     <form class="contact-form" action="<?= base_url('kontak/simpan'); ?>" method="POST">
-      <input name="namaAnda" type="text" class="contact-form-text" placeholder="Nama anda">
-      <input name="usernameAnda" type="username" class="contact-form-text" placeholder="username anda">
-      <input name="no_hpAnda" type="text" class="contact-form-text" placeholder="No HP anda">
-      <textarea name="pesanAnda" class="contact-form-text" placeholder="Pesan anda"></textarea>
+      <input name="nama" type="text" class="contact-form-text" placeholder="Nama anda">
+      <input name="email" type="email" class="contact-form-text" placeholder="Email anda">
+      <input name="no_hp" type="text" class="contact-form-text" placeholder="No HP anda">
+      <textarea name="pesan" class="contact-form-text" placeholder="Pesan anda"></textarea>
       <input type="submit" class="contact-form-btn" value="Kirim">
     </form>
   </div>

@@ -58,7 +58,7 @@
             <div class="clearfix"></div>
 
             <div class="separator">
-              <p class="change_link">Sudah jadi member?
+              <p class="change_link">Sudah punya akun?
                 <a href="<?= base_url('auth'); ?>" class="to_register"> Login </a>
               </p>
               <div class="clearfix"></div>

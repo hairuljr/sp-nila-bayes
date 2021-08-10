@@ -41,14 +41,14 @@
     <div class="inner-width">
       <h1>Hasil Diagnosa</h1>
       <div class="border"></div>
-      <div class="about-section-row">
+      <div class="about-section-row" style="font-size: 22px;">
         <div class="about-section-col">
           <div class="about">
             <?php foreach ($hasilMax as $h) : ?>
-              <a><?= $h['nama_penyakit']; ?></a>
+              <a style="font-weight: 700; text-decoration: underline;"><?= $h['nama_penyakit']; ?></a>
             <?php endforeach; ?>
             <p>
-              <b>Info Penyakit</b><br>
+              <b>Tentang Penyakit</b><br>
               <?= $h['informasi']; ?>
             </p>
             <p>
@@ -57,7 +57,7 @@
             </p>
           </div>
         </div>
-        <div class="about-section-col" style="margin-top: 55px;">
+        <div class="about-section-col" style="margin-top: 65px;">
           <div class="skills">
             <?php foreach ($hasil as $h) : ?>
               <div class="skill" style="margin-bottom: 25px;">
@@ -68,6 +68,7 @@
               </div>
             <?php endforeach; ?>
           </div>
+          <a class="btn btnKembali" href="<?= base_url('home/diagnosa'); ?>">Diagnosa Ulang</a>
         </div>
       </div>
     </div>

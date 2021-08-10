@@ -133,7 +133,8 @@ class Admin_model extends CI_Model
   {
     $data = [
       "name" => $this->input->post('name', true),
-      "is_active" => $this->input->post('is_active', true)
+      "is_active" => $this->input->post('is_active', true),
+      "role_id" => $this->input->post('role_id', true)
     ];
     $this->db->where('id', $this->input->post('id'));
     $this->db->update('user', $data);

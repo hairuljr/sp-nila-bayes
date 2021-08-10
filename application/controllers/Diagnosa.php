@@ -16,7 +16,7 @@ class Diagnosa extends CI_Controller
     //kosongkan temporary sebelum dimulainya diagnosa
     $this->diagnosa->kosongkanTemp();
     $this->diagnosa->kosongkanTempFinal();
-    //tangkap checkbox gejala
+    //tangkap/masukkan checkbox gejala
     $gejala = $this->input->post('gejala');
     foreach ($gejala as $g) {
       $data = [
@@ -27,7 +27,6 @@ class Diagnosa extends CI_Controller
     }
     //dari id_gejala yg ada ditemporary, insert ke temporary final with id_penyakit & probabiliasnya
     $temp = $this->diagnosa->insertTempFinal();
-    // var_dump($temp);die;
     $this->db->insert_batch('temporary_final', $temp);
 
     //ambil bobot probabilitas utk setiap penyakit

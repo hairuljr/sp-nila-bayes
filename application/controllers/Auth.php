@@ -35,6 +35,8 @@ class Auth extends CI_Controller
     $auth = $this->auth->getUser($username);
     // cek jika user dgn username yg diinputkn ada apa tdk di tbl user
     if ($auth) {
+      // jika usernya aktif
+      if ($auth['is_active'] == 1) {
         // cek password yang di inputkan user dgn tbl user
         if (password_verify($password, $auth['password'])) {
           $data = [
@@ -54,6 +56,10 @@ class Auth extends CI_Controller
           $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah!</div>');
           redirect('auth');
         }
+      } else {
+        $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert">Status akun tidak aktif</div>');
+        redirect('auth');
+      }
       //username tidak terdaftar
     } else {
       $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Username belum terdaftar!</div>');
@@ -125,7 +131,7 @@ class Auth extends CI_Controller
     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu berhasil logout!</div>');
     redirect('auth');
   }
-  
+
   public function block()
   {
     $data['judul'] = 'Akses Tidak Diizinkan!';

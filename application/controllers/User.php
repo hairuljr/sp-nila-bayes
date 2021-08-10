@@ -12,6 +12,7 @@ class User extends CI_Controller
       redirect('auth');
     }
   }
+
   public function index()
   {
     $data['judul'] = 'Profil';
@@ -113,7 +114,7 @@ class User extends CI_Controller
     $this->load->view('user/daftar-konsultasi', $data);
     $this->load->view('templates/footer');
   }
-  
+
   public function hapusKonsultasi($id)
   {
     $this->user->hapusKonsultasi($id);

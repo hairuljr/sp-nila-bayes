@@ -39,7 +39,7 @@
         Diagnosa Penyakit Ikan Nila<br />
         dengan Metode Bayes
       </h1>
-      <p>
+      <p style="font-size: 23px;">
         Selamat datang di Sistem Pakar Ikan Nila.
         <br />
         Ayo segera diagnosa gejala penyakit ikan Nila mu.
@@ -48,7 +48,7 @@
         <div class="play-btn-inner">
           <a href="<?= base_url('home/diagnosa'); ?>"><i class="fa fa-play"></i></a>
         </div>
-        <small><b><a style="text-decoration: none; color: #19dafa;" href="<?= base_url('home/diagnosa'); ?>">Mulai Diagnosa</a></b></small>
+        <small><b><a style="text-decoration: none; color: #19dafa; font-size: 20px;" href="<?= base_url('home/diagnosa'); ?>">Mulai Diagnosa</a></b></small>
       </div>
     </div>
     <div class="app-picture">

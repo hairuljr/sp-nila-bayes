@@ -11,8 +11,8 @@
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="tile-stats">
                 <div class="icon"><a href="<?= base_url('admin/konsultasi'); ?>"><i class="fa fa-stethoscope"></i></a></div>
-                <div class="count"><a href="<?= base_url('admin/artikel'); ?>"><?= $jml_gejala; ?></a></div>
-                <h3><a href="<?= base_url('admin/artikel'); ?>">Gejala</a></h3>
+                <div class="count"><a href="<?= base_url('admin/gejala'); ?>"><?= $jml_gejala; ?></a></div>
+                <h3><a href="<?= base_url('admin/gejala'); ?>">Gejala</a></h3>
               </div>
             </div>
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">

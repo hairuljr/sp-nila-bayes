@@ -6,7 +6,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h5 class="modal-title" id="apasih">Tambah Penyakit</h5>
+        <h5 class="modal-title" id="apasih">Tambah Penyakitnya dong</h5>
       </div>
       <form action="<?= base_url('penyakit/tambahPenyakit'); ?>" method="post">
         <div class="modal-body">

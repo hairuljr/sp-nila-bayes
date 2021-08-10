@@ -35,9 +35,23 @@
                     $m['is_active'] = 'Tidak Aktif';
                   }
                   ?>
-                <option value="<?= $m['id']; ?>">Status Sekarang = <?= $m['is_active']; ?></option>
+                <option value="<?= $m['is_active']; ?>" selected disabled>Status Sekarang = <?= $m['is_active']; ?></option>
                 <option value="1">Aktif</option>
                 <option value="0">Tidak Aktif</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <?php
+                if ($m['role_id'] == 1) {
+                  $m['role_id'] = 'Admin';
+                } else {
+                  $m['role_id'] = 'Member';
+                }
+              ?>
+              <select class="form-control" name="role_id">
+                <option value="<?= $m['id']; ?>" selected disabled>Hak Akses Sebagai = <?= $m['role_id']; ?></option>
+                <option value="1">Admin</option>
+                <option value="2">Member</option>
               </select>
             </div>
           </div>
